@@ -28,6 +28,14 @@ allRoutes.get('/posts', async (c) => {
   return c.json(posts, 200)
 })
 
+allRoutes.get('/posts/:id', async (c) => {
+  const { id } = c.req.param()
+  const post = posts.find((p) => p.id === id)
+  if (!post) {
+    return c.notFound();
+  }
+  return c.json(post, 200)
+})
 
 serve(allRoutes, ({ port }) => {
   console.log(`Server is running on http://localhost:${port}`)

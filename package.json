@@ -7,10 +7,12 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.14.1",
+    "@tanstack/react-query": "^4.36.1",
     "hono": "^4.7.7",
     "tsx": "^4.7.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17"    
+    "@tanstack/eslint-plugin-query": "^4.38.0",
+    "@types/node": "^20.11.17"
   }
 }
